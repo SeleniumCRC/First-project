@@ -44,7 +44,7 @@ public class Links {
 			driver.switchTo().window(itr.next());
 			System.out.println(driver.getTitle());
 		}
-		driver.close();
+		driver.quit();
 
 	}
 

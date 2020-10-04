@@ -8,7 +8,7 @@ public class sampleTC {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "E:\\software\\chromedriver_win32 (3)\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
 		WebDriver 	driver = new ChromeDriver();	
 		driver.get("https://www.phptravels.net/home");
 		Thread.sleep(4000);

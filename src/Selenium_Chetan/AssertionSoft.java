@@ -10,17 +10,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
-public class BrokenLinks {
-	public static void main(String[] args) throws MalformedURLException, IOException {
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+public class AssertionSoft {
+
+	@Test
+	public void f() throws MalformedURLException, IOException {
+System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/AutomationPractice");
 		
 		List<WebElement> links= driver.findElements(By.xpath("//*[@class='gf-li']//a"));
 		System.out.println(links.size());
-		
+		SoftAssert softAssert = new SoftAssert();
 		for(WebElement el : links)
 		{
 			String url = el.getAttribute("href");
@@ -30,12 +34,18 @@ public class BrokenLinks {
 			con.setRequestMethod("HEAD");
 			con.connect();
 			int responseCode = con.getResponseCode();
-			if(responseCode>400)
+			softAssert.assertTrue(responseCode<400, "The link with Text"+el.getText()+" is broken with code" +responseCode);
+			/*if(responseCode>400)
 			{
 				System.out.println(el.getText()+": the link name and response code"+responseCode);
-				break;
-			}
+			
+			}*/
 		}
-	driver.quit();
+		driver.close();
+		softAssert.assertAll();
+		
 	}
-}
+
+	}
+
+
