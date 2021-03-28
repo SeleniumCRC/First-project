@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AssignmentSynchronization {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-				System.setProperty("webdriver.chrome.driver", "E:\\software\\chromedriver_win32 (3)\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://www.itgeared.com/demo/1506-ajax-loading.html");

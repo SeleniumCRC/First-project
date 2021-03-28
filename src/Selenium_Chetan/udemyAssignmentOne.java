@@ -11,7 +11,7 @@ public class udemyAssignmentOne {
 		// TODO Auto-generated method stub
 		// Set System property
 		System.setProperty("webdriver.chrome.driver",
-				"E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+				"D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 
 		// Launch url

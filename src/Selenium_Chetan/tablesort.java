@@ -19,7 +19,7 @@ public class tablesort {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "E:\\software\\chromedriver_win32 (3)\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
 		dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);

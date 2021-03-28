@@ -23,7 +23,7 @@ public class ExplictlyWaitExample {
 		itemToAddCart.add("Pista");
 		itemToAddCart.add("Cauliflower");
 
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/seleniumPractise/#/");
 		driver.manage().window().maximize();

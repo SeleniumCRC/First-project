@@ -8,7 +8,7 @@ public class LaunchFireFox {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.gecko.driver", "E:\\Selenium Material\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://www.google.com");
 		

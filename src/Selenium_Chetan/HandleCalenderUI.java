@@ -11,7 +11,7 @@ public class HandleCalenderUI {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://www.path2usa.com/travel-companions");

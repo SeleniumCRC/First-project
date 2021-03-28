@@ -12,7 +12,7 @@ public class AutoItUploadFile {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
-System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 
 WebDriver driver = new ChromeDriver();
 

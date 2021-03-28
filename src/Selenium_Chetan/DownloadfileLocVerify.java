@@ -26,7 +26,7 @@ ChromeOptions options=new ChromeOptions();
 
 options.setExperimentalOption("prefs", chromePrefs);
 
-System.setProperty("webdriver.chrome.driver", "E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 
 WebDriver driver = new ChromeDriver(options);
 
@@ -35,7 +35,7 @@ driver.get("https://altoconvertpdftojpg.com/");
 		driver.manage().deleteAllCookies();
 		driver.findElement(By.id("dropzoneInput-label")).click();
 		Thread.sleep(10000);
-		Runtime.getRuntime().exec("E:\\Selenium Material\\ex.exe");
+		Runtime.getRuntime().exec("D:\\Selenium Material\\ex.exe");
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")));
 		driver.findElement(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")).click();

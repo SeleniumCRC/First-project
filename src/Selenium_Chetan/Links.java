@@ -15,7 +15,7 @@ public class Links {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver",
-				"E:\\Selenium Material\\chromedriver_win32\\chromedriver.exe");
+				"D:\\Selenium Material\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
 		driver.manage().window().maximize();
