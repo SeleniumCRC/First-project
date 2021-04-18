@@ -21,7 +21,7 @@ driver.get("https://altoconvertpdftojpg.com/");
 		driver.manage().deleteAllCookies();
 		driver.findElement(By.id("dropzoneInput-label")).click();
 		Thread.sleep(10000);
-		Runtime.getRuntime().exec("E:\\Selenium Material\\ex.exe");
+		Runtime.getRuntime().exec("D:\\Selenium Material\\ex.exe");
 		
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")));

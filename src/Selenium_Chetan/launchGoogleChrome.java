@@ -19,13 +19,13 @@ public class launchGoogleChrome {
 		// log.error("The url should be same ");
 		String source = driver.getPageSource();
 		System.out.println("Url is" + url + "Tittle is" + tittle + "page source" + source);
-
+		driver.manage().window().maximize();
 		String handle = driver.getWindowHandle();
 		System.out.println(handle);
 
 		driver.close();
 
-		//driver.navigate().to("https://www.google.com");
+	//	driver.navigate().to("https://www.google.com");
 
 	}
 

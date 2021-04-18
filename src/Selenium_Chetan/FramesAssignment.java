@@ -13,14 +13,16 @@ public class FramesAssignment {
 		driver.get("https://the-internet.herokuapp.com");
 		driver.manage().window().maximize();
 		driver.findElement(By.linkText("Nested Frames")).click();
-		int count =driver.findElements(By.tagName("frame")).size();
+		int count =driver.findElements(By.tagName("frameset")).size();
 		System.out.println(count);
 		
 		driver.switchTo().frame("frame-top");
 		driver.switchTo().frame("frame-middle");
+		driver.switchTo().parentFrame();
 		
-		String tittlFrame = driver.findElement(By.xpath("//*[@id='content']")).getText();
-		System.out.println(tittlFrame);
+		System.out.println(driver.getTitle());
+		//String tittlFrame = driver.findElement(By.xpath("//*[@id='content']")).getText();
+		//System.out.println(tittlFrame);
 		driver.close();
 	}
 

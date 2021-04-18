@@ -42,6 +42,7 @@ public class udemyAssignmentThree {
 		Select select = new Select(adults);
 		select.selectByIndex(2);
 		select.selectByVisibleText("5");
+		
 
 		String childrenHint = driver.findElement(By.xpath("//*[text()='2-11 yrs']")).getText();
 		System.out.println(childrenHint);

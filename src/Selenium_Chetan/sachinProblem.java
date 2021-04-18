@@ -98,6 +98,7 @@ public class sachinProblem {
 		Actions action = new Actions(driver);
 		
 		action.moveToElement(laptopNotepad);
+
 		laptopNotepad.click();
 		driver.findElement(By.xpath("//*[text()='Show All Laptops & Notebooks']")).click();
 		WebElement sortBy = driver.findElement(By.xpath("//*[@id='input-sort']"));
