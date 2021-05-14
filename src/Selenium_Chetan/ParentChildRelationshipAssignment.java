@@ -9,7 +9,7 @@ public class ParentChildRelationshipAssignment {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		WebElement  searchBox = driver.findElement(By.xpath("//*[@class='RNNXgb']/div/div[2]/input[contains(@title,'Search')]"));

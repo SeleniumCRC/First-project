@@ -16,7 +16,7 @@ public class FluentWaitExample {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com/dynamic_loading");
 		

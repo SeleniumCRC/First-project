@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class udemyAssignmentOne {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver",
-				"D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
+		
 		WebDriver driver = new ChromeDriver();
 
 		// Launch url

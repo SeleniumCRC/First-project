@@ -3,7 +3,6 @@ package Selenium_Chetan;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,8 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WebTableAssignment {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.rahulshettyacademy.com/AutomationPractice/");
 		WebElement table = driver.findElement(By.xpath("//*[@class='table-display']"));
@@ -22,7 +20,7 @@ public class WebTableAssignment {
 		int columCount = table.findElements(By.xpath("//*[@id='product']/tbody/tr/th")).size();
 		System.out.println("Non of columns" + columCount);
 		
-		String path = "C:\\Users\\SaChet\\git\\First-project\\webTableToExcel.xlsx";
+		String path = "E:\\Selenium\\Chetan Folder\\webTableToExcel.xlsx";
 		ReadExcelFile file = new ReadExcelFile(path);
 		
 		

@@ -11,24 +11,25 @@ public class AutoItUploadFile {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
-		
-System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
 
-WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
 
-driver.get("https://altoconvertpdftojpg.com/");
+		driver.get("https://altoconvertpdftojpg.com/");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.findElement(By.id("dropzoneInput-label")).click();
 		Thread.sleep(10000);
 		Runtime.getRuntime().exec("D:\\Selenium Material\\ex.exe");
-		
+
 		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")));
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")));
 		driver.findElement(By.xpath("//*[@class='cookies-popup cookies-popup--default']/div/button")).click();
-//		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='g-btn g-btn--primary g-btn--medium']")));
+		// wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='g-btn
+		// g-btn--primary g-btn--medium']")));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[class*='medium']")));
-		
+
 		driver.findElement(By.cssSelector("button[class*='medium']")).click();
 
 		driver.close();

@@ -12,10 +12,8 @@ import com.google.common.io.Files;
 public class takeScreenShot {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-
-		System.setProperty("webdriver.chrome.driver",
-				"D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com");
 		

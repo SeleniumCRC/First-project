@@ -12,7 +12,8 @@ public class SslCertification {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
-		System.setProperty("webdriver.chrome.driver", "D:\\Selenium Material\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
+		
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
 		dc.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
 		dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
