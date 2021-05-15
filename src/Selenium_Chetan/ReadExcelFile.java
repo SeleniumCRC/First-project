@@ -38,10 +38,11 @@ public class ReadExcelFile {
 		return row;
 	}
 	
-	public void setData(int sheetnumber, int row, int column, String value)
+	public void setData(String sheetnumber, int row, int column, String value)
 	{	
-		sheet = work_book.getSheetAt(sheetnumber);
-		
+		System.out.println("inside");
+		sheet = work_book.getSheet(sheetnumber);
+		System.out.println("inside2");
 		XSSFRow row2=sheet.createRow(row);
 		XSSFCell cell = row2.createCell(column);
 		cell.setCellValue(value);

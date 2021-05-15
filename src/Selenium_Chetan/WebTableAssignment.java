@@ -20,7 +20,7 @@ public class WebTableAssignment {
 		int columCount = table.findElements(By.xpath("//*[@id='product']/tbody/tr/th")).size();
 		System.out.println("Non of columns" + columCount);
 		
-		String path = "E:\\Selenium\\Chetan Folder\\webTableToExcel.xlsx";
+		String path = "E:\\Selenium\\Chetan Folder\\First-projectwebTableToExcel.xlsx";
 		ReadExcelFile file = new ReadExcelFile(path);
 		
 		
@@ -29,7 +29,7 @@ public class WebTableAssignment {
 
 			String instructor = "//*[@name='courses']/tbody/tr[" + i + "]//td[1]";
 			System.out.println(table.findElement(By.xpath(instructor)).getText());
-			file.setData(0, i, 0, instructor);
+			file.setData("a", i, 0, instructor);
 
 			String course = "//*[@name='courses']/tbody/tr[" + i + "]//td[2]";
 			System.out.println(table.findElement(By.xpath(course)).getText());
