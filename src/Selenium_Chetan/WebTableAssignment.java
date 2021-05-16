@@ -29,7 +29,7 @@ public class WebTableAssignment {
 
 			String instructor = "//*[@name='courses']/tbody/tr[" + i + "]//td[1]";
 			System.out.println(table.findElement(By.xpath(instructor)).getText());
-			file.setData("a", i, 0, instructor);
+			//file.setData("a", i, 0, instructor);
 
 			String course = "//*[@name='courses']/tbody/tr[" + i + "]//td[2]";
 			System.out.println(table.findElement(By.xpath(course)).getText());
@@ -37,7 +37,7 @@ public class WebTableAssignment {
 			String price = "//*[@name='courses']/tbody/tr[" + i + "]//td[3]";
 			System.out.println(table.findElement(By.xpath(price)).getText());
 			
-			file.writeFile(path);
+			//file.writeFile(path);
 		}
 		
 

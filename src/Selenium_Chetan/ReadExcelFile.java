@@ -15,11 +15,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ReadExcelFile {
 	XSSFWorkbook work_book;
 	XSSFSheet sheet;
-
+	FileInputStream stream;
 	public ReadExcelFile(String excelfilePath) {
 		try {
 			File s = new File(excelfilePath);
-			FileInputStream stream = new FileInputStream(s);
+			stream = new FileInputStream(s);
 			work_book = new XSSFWorkbook(stream);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -28,6 +28,7 @@ public class ReadExcelFile {
 
 	public String getData(int sheetnumber, int row, int column) {
 		sheet = work_book.getSheetAt(sheetnumber);
+		//System.out.println(sheet.getRow(row).getCell(column).getStringCellValue());
 		String data = sheet.getRow(row).getCell(column).getStringCellValue();
 		return data;
 	}
@@ -38,17 +39,28 @@ public class ReadExcelFile {
 		return row;
 	}
 	
-	public void setData(String sheetnumber, int row, int column, String value)
+	public int getColumnCount(int sheetIndex) {
+		int col = work_book.getSheetAt(sheetIndex).getRow(0).getLastCellNum();
+		return col;
+	}
+	
+	public void setData(int  sheetnumber, int row, int column, String value) throws IOException
 	{	
 		System.out.println("inside");
-		sheet = work_book.getSheet(sheetnumber);
+		sheet = work_book.getSheetAt(sheetnumber);
 		System.out.println("inside2");
 		XSSFRow row2=sheet.createRow(row);
+		System.out.println("inside3");
 		XSSFCell cell = row2.createCell(column);
+		System.out.println("inside4");
 		cell.setCellValue(value);
+		System.out.println("inside5");
+		stream.close();
+		
+		
 	}
 
-	public void writeFile(String excelfilePath) throws FileNotFoundException
+	public void writeFile(String excelfilePath) throws IOException
 	{
 	FileOutputStream outputStream = new FileOutputStream("excelfilePath");
 	try {
@@ -57,6 +69,7 @@ public class ReadExcelFile {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	outputStream.close();
 	}
 
 }
