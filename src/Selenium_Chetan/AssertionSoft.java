@@ -1,5 +1,7 @@
 package Selenium_Chetan;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -15,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 
 public class AssertionSoft {
 
-	@Test
+	
 	public void f() throws MalformedURLException, IOException {
     System.setProperty("webdriver.chrome.driver", "E:\\Selenium\\Chetan Folder\\chromedriver.exe");
 		

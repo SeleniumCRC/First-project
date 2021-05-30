@@ -48,13 +48,14 @@ public class ReadExcelFile {
 	{	
 		System.out.println("inside");
 		sheet = work_book.getSheetAt(sheetnumber);
-		System.out.println("inside2");
+		
+		System.out.println(sheetnumber);
 		XSSFRow row2=sheet.createRow(row);
-		System.out.println("inside3");
+		System.out.println(row2);
 		XSSFCell cell = row2.createCell(column);
 		System.out.println("inside4");
 		cell.setCellValue(value);
-		System.out.println("inside5");
+		System.out.println(value);
 		stream.close();
 		
 		
@@ -62,7 +63,7 @@ public class ReadExcelFile {
 
 	public void writeFile(String excelfilePath) throws IOException
 	{
-	FileOutputStream outputStream = new FileOutputStream("excelfilePath");
+	FileOutputStream outputStream = new FileOutputStream(excelfilePath);
 	try {
 		work_book.write(outputStream);
 	} catch (IOException e) {

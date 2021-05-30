@@ -26,7 +26,7 @@ public class dataDrivenTest extends ReadExcelFile
 		{
 			String name = dt.getData(0, i, 0);
 			System.out.print(name+"|");
-			
+						
 			String latName = dt.getData(0, i, 1);
 			System.out.print(latName+"|");
 			
@@ -35,15 +35,15 @@ public class dataDrivenTest extends ReadExcelFile
 		}
 		String name = dt.getData(0, 2, 1);
 		System.out.println(name);
-		dt.setData(0, 5, 0, "bh");
-		Row row = dt.sheet.createRow(6);
+        dt.setData(0, 4, 0, "bh");
+		Row row = dt.sheet.createRow(5);
 		Cell cell = row.createCell(0);
 		cell.setCellValue("Piyali");
-		
+
 		try {
 			dt.writeFile(path);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}

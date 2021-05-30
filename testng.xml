@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="Test1">
-  <classes>
-  <class name="">
-  </class>
-  </classes>
-  </test> <!-- Test -->
+<parameter name="username" value="Chetan"></parameter>
+	<test name="Test">
+		<classes>
+			<class name="TestNG_Chetan.priorityTest" />
+		</classes>
+	</test>
+	<test name="smokeTest">
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+		<class name="TestNG_Chetan.groupsTest"></class>
+		</classes>
+	</test>
 </suite> <!-- Suite -->
